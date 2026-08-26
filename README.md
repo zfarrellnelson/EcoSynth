@@ -4,11 +4,9 @@
 
 ## Project Overview
 
-**Project Type:** [ ]  
-**Timeline:** [ ]  
-**Team:** [ ]  
-**My Role:** [ ]  
-**Status:** [ ]
+**Project Type:** Interactive Hardware / Music Technology Project  
+**Timeline:** [ ]   
+**Status:** In-Development
 
 ## Concept
 
@@ -40,12 +38,22 @@
 
 ## Sensors
 
-### Sensor 1
-**Purpose:** [ ]  
-**Input:** [ ]  
-**Processing:** [ ]  
-**MIDI Output:** [ ]  
-**Controlled Parameter:** [ ]
+### MPU 9250
+**Purpose:** Track Movement and Magnetism  
+
+**Input:** Magnetic Field, Acceleration, Gyroscopic Movement    
+
+**Processing:** Read raw value -> Normalize X Y Z inputs -> map to 0-127  
+
+**MIDI Channels:**   
+- Magnetometer: Channel 1, CC 102  
+- Accelerometer: Channel 1, CC 103  
+- Gyroscope: Channel 1, CC 104  
+
+**Controlled Parameter:**  
+- Magnetometer: [ ]  
+- Accelerometer: [ ]  
+- Gyroscope: [ ] 
 
 ### Sensor 2
 **Purpose:** [ ]  
