@@ -71,6 +71,8 @@ EcoSynth stands for Ecological Synthesizer; As Ecology is the relation of an org
 
 [Explain how raw sensor data becomes MIDI]
 
+Using the Mido (Midi Objects For Python) plugin, I'm able to 
+
 ```text
 Sensor
   ↓
