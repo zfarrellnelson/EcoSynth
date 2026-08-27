@@ -11,20 +11,17 @@ My solution is to use an unused Raspberry Pi 3B that I already own. Is it overki
 
 [insert image].
 
+## Talking To Zynthian With Sensors
+
+By far the biggest hurdle with the project was the Sensor -> Zynthian connection. Note that at one point I 
+
 
 > Found by testing 'dht_test.py' before and after halting the Zynthian engine with 'sudo systemctl stop zynthian'.
 
-## Project Overview
+My solution is to use an unused Raspberry Pi 3B that I already own. Is it overkill? Absolutely. Is it better to use it than ordering an Arduino? Also yes. After getting the script working on the Pi 3B, (named 'testpi3b'), I connected it to the DHT-22.
 
-**Project Type:** Interactive Hardware / Music Technology Project  
-**Timeline:** [ ]   
-**Status:** In-Development
+[insert image].
 
-## Concept
-
-[What is EcoSynth?]
-
-EcoSynth stands for Ecological Synthesizer; As Ecology is the relation of an organism to its environment, EcoSynth simulates a musician's connection to their surroundings. Running the Zynthian frontend, EcoSynth uses the outputs of various sensors to receive an environmental influence, such as Magnetic Fields, Ambient Light, Humidity, and Temperature. EcoSynth also receives data from physical changes in the musician/instruments position, such as Gyroscopic Movement, Acceleration, and Proximity. By using these inputs, EcoSynth can output a sound that is truly unique to a person's surroundings, representing their position and relation to the world around them.
 
 
 [What problem/question inspired the project?]
