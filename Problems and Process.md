@@ -5,11 +5,7 @@
 After connecting the DHT-22 chip, (which manages Humidity and Temperature), I noticed that I was getting Checksum Errors extremely frequently. After doing some research, I learned that Checksum errors are a result of any of the 40 'pings' of the chip getting interrupted, with the 'pings' being the polling of a chip's bit. Since I wasn't actively engaging any other sensors on my raspi4, I knew that a process it was running had to be the culprit of the interruptions. Seeing as the raspi was running the Zynthian engine, I first decided to test that, (as it seemed the most likely culprit), and that ended up being correct.
 
 
-
-
-
-
-> An Environmentally-Influenced Synthesizer using the Zynthian Engine and Sensor-Dependent Effects.
+> Found by testing 'dht_test.py' before and after halting the Zynthian engine with 'sudo systemctl stop zynthian'.
 
 ## Project Overview
 
