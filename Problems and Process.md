@@ -7,6 +7,13 @@ After connecting the DHT-22 chip, (which manages Humidity and Temperature), I no
 
 > Found by testing 'dht_test.py' before and after halting the Zynthian engine with 'sudo systemctl stop zynthian'.
 
+My solution is to use an unused Raspberry Pi 3B that I already own. Is it overkill? Absolutely. Is it better to use it than ordering an Arduino? Also yes. After getting the script working on the Pi 3B, (named 'testpi3b'), I connected it to the DHT-22.
+
+[insert image].
+
+
+> Found by testing 'dht_test.py' before and after halting the Zynthian engine with 'sudo systemctl stop zynthian'.
+
 ## Project Overview
 
 **Project Type:** Interactive Hardware / Music Technology Project  
