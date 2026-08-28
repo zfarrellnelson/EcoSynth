@@ -1,3 +1,5 @@
+# this is just to have the pi3 test if it can actually read the outputs, not send them or anything
+
 # use pin 7
 import time
 import board
