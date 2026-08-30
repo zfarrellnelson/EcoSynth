@@ -55,8 +55,8 @@ python3 mpu_gyro_to_midi.py
 
 T1:
 
-sudo jack_connect "a2j:RtMidiOut Client [132] (capture): MPU9250 Accelerometer" "ZynMidiRouter:dev0_in"  
-sudo jack_connect "a2j:RtMidiOut Client [132] (capture): MPU9250 Accelerometer" "ZynMidiRouter:ctrl_in"  
+sudo jack_connect "a2j:RtMidiOut Client [132] (capture): MPU9250 Gyroscope" "ZynMidiRouter:dev0_in"  
+sudo jack_connect "a2j:RtMidiOut Client [132] (capture): MPU9250 Gyroscope" "ZynMidiRouter:ctrl_in"  
 
 Z:
 
