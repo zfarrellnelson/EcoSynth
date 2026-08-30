@@ -1,5 +1,8 @@
 #T1 stands for Terminal 1. TU stands for a unique terminal for the individual sensed property. There is one TU per sensed property. Z stands for Zynthian (within the Zynthian interface).
 
+VIEW ALL CHANNELS:
+sudo jack_lsp -A | grep -i DHT22
+
 ---------------------
 
 TU:
