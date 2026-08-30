@@ -8,7 +8,8 @@ After connecting the DHT-22 chip, (which manages Humidity and Temperature), I no
 
 My solution is to implement an unused Raspberry Pi 3B that I already own. Is it overkill? Absolutely. Is it better to use it than ordering an Arduino? Also absolutely. After getting the script working on the Pi 3B, (named 'testpi3b'), I connected it to the DHT-22. I connected the Raspi3B and Raspi4, (shortened to pi3 and pi4 respectively), and allocated them static IP addresses (192.168.2.63/64). After using Claude to generate a basic version of communication for the two pis as a test, (dht_test.py), I adapted the MPU-9250 code to allow the pi4 to send midi based on the received humidity and temperature data from the pi3. I later split the code into ___ and ____, allowing the pausing of one script to midi learn the other.
 
-[insert image].
+[insert image].<img width="2557" height="1386" alt="image" src="https://github.com/user-attachments/assets/d34783f6-8eaa-407c-a2ce-7632951d3ab7" />
+
 
 ## Talking To Zynthian With Sensors
 
