@@ -16,5 +16,5 @@ sudo jack_connect "a2j:RtMidiOut Client [131] (capture): MPU9250 Accelerometer" 
 
 channel: 104
 
-sudo jack_connect "a2j:RtMidiOut Client [132] (capture): MPU9250 Accelerometer" "ZynMidiRouter:dev0_in"  
-sudo jack_connect "a2j:RtMidiOut Client [132] (capture): MPU9250 Accelerometer" "ZynMidiRouter:ctrl_in"
+sudo jack_connect "a2j:RtMidiOut Client [132] (capture): MPU9250 Gyroscope" "ZynMidiRouter:dev0_in"  
+sudo jack_connect "a2j:RtMidiOut Client [132] (capture): MPU9250 Gyroscope" "ZynMidiRouter:ctrl_in"
