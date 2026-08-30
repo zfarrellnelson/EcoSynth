@@ -76,10 +76,10 @@ Now using Pi3 and Pi4:
 
 PI3_U:
 
-python3 dht_send.py
+python3 dht_send_v2.py
 
 PI4_U:
 
-dht
+dht_temp_to_midi.py
 
 
