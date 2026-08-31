@@ -20,7 +20,7 @@ sensor = ltr559.LTR559()
 time.sleep(0.5)  # settle delay before first read
 
 # --- CC assignment ---
-CC_LUX = 105
+CC_LUX = 107
 MIDI_CHANNEL = 0  # channel 1
 
 # --- Calibration range (adjust based on your environment) ---
