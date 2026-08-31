@@ -20,6 +20,16 @@ By far the biggest hurdle with the project was the Sensor -> Zynthian connection
 
 [insert image].
 
+## Connecting LTR-559
+
+In order to set up the LTR-559, I first soldered 4 wires to the board itself, allowing for easy connectivity later. In order to get it working on the raspi4, I first ran this:  
+sudo i2cdetect -y 1 # (if 23 shows up, all set)
+pip3 install ltr559 --break-system-packages
+Now I'm going to make a test script.
+
+
+
+
 ## Goals
 
 - [ ]
