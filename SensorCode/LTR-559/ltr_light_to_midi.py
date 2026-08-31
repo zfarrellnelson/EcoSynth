@@ -35,6 +35,8 @@ def scale_to_midi(value, in_min, in_max):
 last_lux_cc = -1
 last_prox_cc = -1
 
+print("Running. Move your hand / change light to see CC output. Ctrl+C to stop.")
+
 try:
     while True:
         lux = sensor.get_lux()
@@ -47,11 +49,13 @@ try:
         if lux_cc != last_lux_cc:
             outport.send(mido.Message('control_change', channel=MIDI_CHANNEL,
                                        control=CC_LUX, value=lux_cc))
+            print(f"Lux: {lux} -> CC{CC_LUX}={lux_cc}")
             last_lux_cc = lux_cc
 
         if prox_cc != last_prox_cc:
             outport.send(mido.Message('control_change', channel=MIDI_CHANNEL,
                                        control=CC_PROXIMITY, value=prox_cc))
+            print(f"Prox: {prox} -> CC{CC_PROXIMITY}={prox_cc}")
             last_prox_cc = prox_cc
 
         time.sleep(0.05)  # ~20Hz poll rate
