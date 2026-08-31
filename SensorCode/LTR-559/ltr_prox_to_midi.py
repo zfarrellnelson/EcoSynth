@@ -20,7 +20,7 @@ sensor = ltr559.LTR559()
 time.sleep(0.5)  # settle delay before first read
 
 # --- CC assignment ---
-CC_PROXIMITY = 106
+CC_PROXIMITY = 108
 MIDI_CHANNEL = 0  # channel 1
 
 # --- Calibration range (LTR-559 proximity is typically 0-2047) ---
