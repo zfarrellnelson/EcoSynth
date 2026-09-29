@@ -21,7 +21,7 @@ WINDOW = 30  # fewer points = smaller/faster redraw, less flicker
 
 gyro_vals = deque(maxlen=WINDOW)
 
-plt.plotsize(80, 20)  # fixed size keeps terminal from reflowing/jumping
+plt.plotsize(80, 20)  # fixed size keeps terminal from jumping
 
 print("Reading MPU9250... Ctrl+C to stop")
 time.sleep(1)
@@ -36,7 +36,7 @@ try:
         plt.cld()  # clear previous data
         plt.plot(list(gyro_vals), label="Gyro Magnitude")
 
-        plt.ylim(0, 1000)  # magnitude is always positive; near 0 at rest, adjust once you see real values
+        plt.ylim(0, 1000)  # magnitude is always positive; near 0 at rest
         plt.title("MPU9250 Live Gyroscope Magnitude")
         plt.xlabel("Sample")
         plt.ylabel("dps")
