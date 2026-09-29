@@ -17,14 +17,14 @@ print(f"Using MIDI port: {port_name}")
 
 # --- Sensor setup ---
 sensor = ltr559.LTR559()
-time.sleep(0.5)  # settle delay before first read
+time.sleep(0.5)  # a little delay before first read
 
 # --- CC assignment ---
 CC_LUX = 107
 MIDI_CHANNEL = 0  # channel 1
 
-# --- Calibration range (adjust based on your environment) ---
-LUX_MIN, LUX_MAX = 0, 1000  # tune after observing your room's range
+# --- Calibration range ---
+LUX_MIN, LUX_MAX = 0, 1000  # tune depending on room
 
 def scale_to_midi(value, in_min, in_max):
     value = max(in_min, min(in_max, value))
