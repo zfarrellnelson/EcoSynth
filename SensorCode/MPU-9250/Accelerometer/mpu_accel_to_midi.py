@@ -7,17 +7,17 @@ import math
 # ---- CONFIGURATION ----
 CC_NUMBER = 103       # undefined/free CC range is 102-119, safe from conflicts
 MIDI_CHANNEL = 0      # 0 = channel 1 in MIDI terms
-MIN_MAG = 0.5           # magnitude value that maps to CC 0  (tune after watching real readings)
-MAX_MAG = 6           # magnitude value that maps to CC 127 (tune after watching real readings)
+MIN_MAG = 0.5           # magnitude value that maps to CC 0 
+MAX_MAG = 6           # magnitude value that maps to CC 127
 SEND_INTERVAL = 0.05  # seconds between MIDI sends (20 times/sec)
 
 # ---- LIST AVAILABLE PORTS (uncomment to check) ----
 # print(mido.get_output_names())
 
 # ---- OPEN MIDI PORT ----
-# Create our own virtual MIDI port rather than connecting directly to
+# Create my own virtual MIDI port rather than connecting directly to
 # FluidSynth. This lets Zynthian's MIDI router (and Global Learn) see
-# us as a proper MIDI input source, the same way a hardware controller
+# the port as a proper MIDI input source, the same way a hardware controller
 # would show up.
 PORT_NAME = "MPU9250 Accelerometer"
 outport = mido.open_output(PORT_NAME, virtual=True)
@@ -50,7 +50,7 @@ def scale_to_midi(value, in_min, in_max):
 
 print("Streaming accelerometer -> MIDI CC. Ctrl+C to stop.")
 
-last_cc_value = -1  # track last sent value to avoid flooding identical CCs
+last_cc_value = -1  # track last sent value to avoid flooding with identical CCs
 
 try:
     while True:
@@ -59,7 +59,7 @@ try:
 
         cc_value = scale_to_midi(magnitude, MIN_MAG, MAX_MAG)
 
-        # only send if the value actually changed, keeps MIDI traffic clean
+        # only send if the value actually changed, keeps MIDI traffic not crazy
         if cc_value != last_cc_value:
             msg = mido.Message('control_change',
                                 channel=MIDI_CHANNEL,
