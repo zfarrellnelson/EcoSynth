@@ -36,7 +36,7 @@ try:
         plt.cld()  # clear previous data
         plt.plot(list(mag_vals), label="Mag Magnitude")
 
-        plt.ylim(0, 150)  # magnitude is always positive; adjust once you see real values
+        plt.ylim(0, 150)  # magnitude is always positive
         plt.title("MPU9250 Live Magnetometer Magnitude")
         plt.xlabel("Sample")
         plt.ylabel("uT")
