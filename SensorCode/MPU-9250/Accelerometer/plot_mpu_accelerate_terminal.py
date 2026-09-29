@@ -21,7 +21,7 @@ WINDOW = 30  # fewer points = smaller/faster redraw, less flicker
 
 accel_vals = deque(maxlen=WINDOW)
 
-plt.plotsize(80, 20)  # fixed size keeps terminal from reflowing/jumping
+plt.plotsize(80, 20)  # fixed size keeps terminal from jumping out of control
 
 print("Reading MPU9250... Ctrl+C to stop")
 time.sleep(1)
@@ -36,7 +36,7 @@ try:
         plt.cld()  # clear previous data
         plt.plot(list(accel_vals), label="Accel Magnitude")
 
-        plt.ylim(0, 3)  # magnitude is always positive; ~1.0g at rest, adjust once you see real values
+        plt.ylim(0, 3)  # magnitude is always positive; ~1.0g at rest
         plt.title("MPU9250 Live Accelerometer Magnitude")
         plt.xlabel("Sample")
         plt.ylabel("g")
