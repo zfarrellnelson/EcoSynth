@@ -17,13 +17,13 @@ print(f"Using MIDI port: {port_name}")
 
 # --- Sensor setup ---
 sensor = ltr559.LTR559()
-time.sleep(0.5)  # settle delay before first read
+time.sleep(0.5)  # a little delay before first read
 
 # --- CC assignment ---
 CC_PROXIMITY = 108
 MIDI_CHANNEL = 0  # channel 1
 
-# --- Calibration range (LTR-559 proximity is typically 0-2047) ---
+# --- Calibration range ---
 PROX_MIN, PROX_MAX = 0, 2047
 
 def scale_to_midi(value, in_min, in_max):
