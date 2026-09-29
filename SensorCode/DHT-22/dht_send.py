@@ -7,11 +7,11 @@ import adafruit_dht
 
 # ---- CONFIGURATION ----
 PI4_IP = "192.168.2.64"   # Pi4's static IP (direct Ethernet link)
-PI4_PORT = 5005           # arbitrary port, just make sure it matches the receiver
-SEND_INTERVAL = 2         # seconds between reads (bump to 5-10 if you see checksum errors)
+PI4_PORT = 5005           # make sure it matches the receiver, port num itself is arbitrary
+SEND_INTERVAL = 2         # seconds between reads (bump if I get checksummed)
 
 # ---- SENSOR + SOCKET SETUP ----
-# if switching pins, change board.D4 to the applicable board pin
+# if switching pins, change board.D4 to the new pin
 dht_device = adafruit_dht.DHT22(board.D4)
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)  # UDP, no connection to maintain
 
@@ -24,7 +24,6 @@ try:
             humidity = dht_device.humidity
 
             if temperature is not None and humidity is not None:
-                # Keep this format simple and stable - the Pi4 side parses it directly.
                 line = f"Temp:{temperature:.1f},Humidity:{humidity:.1f}"
                 sock.sendto(line.encode("utf-8"), (PI4_IP, PI4_PORT))
                 print(f"Sent -> {line}")
@@ -32,7 +31,7 @@ try:
                 print("Sensor returned None, skipping this cycle.")
 
         except RuntimeError as e:
-            # DHT22 read glitches are normal, just retry next cycle
+            # DHT22 read glitches are gonna happen, retry when it doesn't work
             print(f"Reading error: {e.args[0]}")
 
         time.sleep(SEND_INTERVAL)
