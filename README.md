@@ -2,6 +2,8 @@
 
 > An Environmentally-Influenced Synthesizer using the Zynthian Engine and Sensor-Dependent Effects.
 
+> [![Watch the video](https://youtu.be/YRuw8TGh_OU)](https://youtu.be/YRuw8TGh_OU)
+
 ## Project Overview
 
 **Project Type:** Interactive Hardware / Music Technology Project  
