@@ -2,7 +2,7 @@
 
 > An Environmentally-Influenced Synthesizer using the Zynthian Engine and Sensor-Dependent Effects.
 
-> [![Watch the video](https://youtu.be/YRuw8TGh_OU)](https://youtu.be/YRuw8TGh_OU)
+> [![Watch the video](https://youtube.com)](https://youtu.be/YRuw8TGh_OU)
 
 ## Project Overview
 
